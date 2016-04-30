@@ -41,6 +41,14 @@ public class project1  extends Application{
 			     for(int i =2 ;i<=4 ;i++)
 			    	 for(int j=2;j>=0;j--)
 			    		g.add(arr[k--], j, i);
+			     ///last row
+			     String [] str = {"0",".", "%" ,"+"};
+			     Button []last_row= new Button[4];
+			    	 for(int i=0;i<4;i++){
+			    		 last_row[i]= new Button(str[i]);
+			    		  last_row[i].setPrefSize(50,40); 
+			    				 g.add(last_row[i], i, 5);	
+			    	 }
 			       g.setHgap(3);
                    g.setVgap(3);		
 		st.setScene(new Scene(g,300,200));
@@ -84,5 +92,28 @@ public class project1  extends Application{
 		text.setText((text.getText()+arr[9].getText()));
 		
 		});
+	last_row[0].setOnAction(e->{
+		text.setText((text.getText()+last_row[0].getText()));
+	
+	});
+	
+	
+	last_row[1].setOnAction(e->{
+		text.setText((text.getText()+" " +last_row[1].getText()));
+		
+	
+	});
+	
+
+	last_row[2].setOnAction(e->{
+		text.setText((text.getText()+" " +last_row[2].getText()+" "));
+	
+	});
+	
+	
+	last_row[3].setOnAction(e->{
+		text.setText((text.getText()+" "+last_row[3].getText()+" "));
+	
+	});
 	}}
 	
